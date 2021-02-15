@@ -1,0 +1,19 @@
+  "list of unconfirmed transactions" :
+  def unconfirmed(self):
+       
+   return self.unconfirmedTransaction[:]
+"return last block":
+
+    def lastChain(self):
+        if len(self.__chain) < 1:
+            return None
+        return self.__chain[-1]
+        
+     " Append a new transactions":
+     
+    def addTransaction(self, sender, receiver, amount=0.9):
+        
+    transaction = Transaction(sender, receiver, amount)
+        self.unconfirmedTransaction.append(transaction)
+
+      
